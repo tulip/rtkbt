@@ -3,8 +3,8 @@ ifneq ($(KERNELRELEASE),)
 	rtk_btusb-y = rtk_coex.o rtk_misc.o rtk_bt.o
 else
 	PWD := $(shell pwd)
-	KVER := $(shell uname -r)
-	KDIR := /lib/modules/$(KVER)/build
+	KVER := 6.1.60-tulip
+	KDIR := $(INSTALL_MOD_PATH)/lib/modules/$(KVER)/build
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules
