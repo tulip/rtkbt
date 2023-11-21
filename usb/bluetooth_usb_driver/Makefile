@@ -7,7 +7,7 @@ else
 	KDIR := $(INSTALL_MOD_PATH)/lib/modules/$(KVER)/build
 
 all:
-	$(MAKE) -C $(KDIR) M=$(PWD) modules
+	$(MAKE) -C $(KSRC) M=$(PWD) modules
 
 clean:
 	rm -rf *.o *.mod.c *.mod.o *.ko *.symvers *.order *.a
